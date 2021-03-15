@@ -4,7 +4,7 @@
  * @return {boolean}
  */
 const isValid = (s) => {
-  const hashMap = {
+  const parenthesesMap = {
     '(': ')',
     '{': '}',
     '[': ']',
@@ -13,7 +13,8 @@ const isValid = (s) => {
   let stackIndex = 0;
 
   for (let i = 1; i < s.length; i++) {
-    if (hashMap[stack[stackIndex]] === s[i]) {
+    const closeParentheses = parenthesesMap[stack[stackIndex]];
+    if (closeParentheses === s[i]) {
       if (stackIndex > 0) stackIndex--;
       stack.pop();
     } else {
