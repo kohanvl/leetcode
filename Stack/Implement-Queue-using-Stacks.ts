@@ -1,6 +1,6 @@
 // Easy - https://leetcode.com/problems/implement-queue-using-stacks/
 class MyQueue {
-  stack: any[];
+  stack: number[];
 
   constructor() {
     this.stack = [];
