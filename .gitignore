@@ -2,15 +2,19 @@
 Longest-Palindromic-Substring.js
 Valid-Parenthesis-String.js
 Count-and-Say.js
-Find-All-Numbers-Disappeared-in-an-Array.js
 Merge-Sorted-Array.js
 Rotate-Array.js
 Construct-Binary-Search-Tree-from-Preorder-Traversal.js
-Matrix
-Design
+Number-of-Islands.ts
+LRU-Cache.ts
 Search-in-Rotated-Sorted-Array.ts
 Valid-Parenthesis-String.ts
 Number-of-Islands.ts
 Maximal-Square.ts
 Jump Game.ts
 Binary-Tree-Maximum-Path-Sum.ts
+Find-All-Numbers-Disappeared-in-an-Array.ts
+Longest-Palindromic-Substring.ts
+Palindrome Number.ts
+Construct-Binary-Search-Tree-from-Preorder-Traversal.ts
+Validate-Binary-Search-Tree.ts
