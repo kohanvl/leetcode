@@ -1,5 +1,5 @@
 // Easy - https://leetcode.com/problems/remove-element/
-function removeElement(nums: number[], val: number): number {
+const removeElement = (nums: number[], val: number): number => {
   let i = 0;
   for (let j = 0; j < nums.length; j++) {
     if (nums[j] !== val) {
@@ -8,4 +8,4 @@ function removeElement(nums: number[], val: number): number {
     }
   }
   return i;
-}
+};
