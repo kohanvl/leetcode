@@ -1,17 +1,20 @@
 /**
  * Medium - https://leetcode.com/problems/remove-nth-node-from-end-of-list/
  * Definition for singly-linked list.
- * function ListNode(val, next) {
- *     this.val = (val===undefined ? 0 : val)
- *     this.next = (next===undefined ? null : next)
+ * class ListNode {
+ *     val: number
+ *     next: ListNode | null
+ *     constructor(val?: number, next?: ListNode | null) {
+ *         this.val = (val===undefined ? 0 : val)
+ *         this.next = (next===undefined ? null : next)
+ *     }
  * }
  */
-/**
- * @param {ListNode} head
- * @param {number} n
- * @return {ListNode}
- */
-const removeNthFromEnd = (head, n) => {
+
+const removeNthFromEnd = (
+  head: ListNode | null,
+  n: number,
+): ListNode | null => {
   let node = head;
   let len = 0;
   while (node) {
