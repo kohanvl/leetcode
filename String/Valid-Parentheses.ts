@@ -1,9 +1,5 @@
-/**
- * Easy - https://leetcode.com/problems/valid-parentheses/
- * @param {string} s
- * @return {boolean}
- */
-const isValid = (s) => {
+//Easy - https://leetcode.com/problems/valid-parentheses/
+const isValid = (s: string): boolean => {
   const parenthesesMap = {
     '(': ')',
     '{': '}',
@@ -18,7 +14,7 @@ const isValid = (s) => {
       if (stackIndex > 0) stackIndex--;
       stack.pop();
     } else {
-      if (!!stack.length) stackIndex++;
+      if (stack.length) stackIndex++;
       stack.push(s[i]);
     }
   }
