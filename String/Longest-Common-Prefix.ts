@@ -1,9 +1,5 @@
-/**
- * Easy - https://leetcode.com/problems/longest-common-prefix/
- * @param {string[]} strs
- * @return {string}
- */
-var longestCommonPrefix = function (strs) {
+// Easy - https://leetcode.com/problems/longest-common-prefix/
+const longestCommonPrefix = (strs: string[]): string => {
   if (strs.length === 0) return '';
   if (strs.length === 1) return strs[0];
 

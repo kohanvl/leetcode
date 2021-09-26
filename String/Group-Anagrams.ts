@@ -1,9 +1,5 @@
-/**
- * Meduim - https://leetcode.com/problems/group-anagrams/
- * @param {string[]} strs
- * @return {string[][]}
- */
-const groupAnagrams = (strs) => {
+// Medium - https://leetcode.com/problems/group-anagrams/
+const groupAnagrams(strs: string[]): string[][] {
   const hashMap = {};
   const result = [];
   for (let i = 0; i < strs.length; i++) {
