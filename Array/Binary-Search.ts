@@ -1,4 +1,4 @@
-// Easy - https://leetcode.com/problems/binary-search/submissions/
+// Easy - https://leetcode.com/problems/binary-search/
 const search = (nums: number[], target: number): number => {
   let pivot = 0;
   let left = 0;
