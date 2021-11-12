@@ -1,9 +1,5 @@
-/**
- * Easy - https://leetcode.com/problems/contains-duplicate/
- * @param {number[]} nums
- * @return {boolean}
- */
-const containsDuplicate = (nums) => {
+// Medium - https://leetcode.com/problems/contains-duplicate/
+const containsDuplicate = (nums: number[]): boolean => {
   const haspMap = {};
   for (let i = 0; i < nums.length; i++) {
     haspMap[nums[i]] = haspMap[nums[i]] ? haspMap[nums[i]] + 1 : 1;
