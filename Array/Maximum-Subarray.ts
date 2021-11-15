@@ -1,9 +1,5 @@
-/**
- * Easy - https://leetcode.com/problems/maximum-subarray/
- * @param {number[]} nums
- * @return {number}
- */
-const maxSubArray = (nums) => {
+//Easy - https://leetcode.com/problems/maximum-subarray/
+const maxSubArray = (nums: number[]): number => {
   let sum = nums[0];
   let max = nums[0];
 
