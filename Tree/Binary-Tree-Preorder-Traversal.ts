@@ -14,11 +14,11 @@
  */
 
 const preorderTraversal = (root: TreeNode | null): number[] => {
-  // return dfsRecursive(root, []);
-  return dfsIterative(root);
+  // return preorderRecursive(root, []);
+  return preorderIterative(root);
 };
 
-// const dfsRecursive = (node: TreeNode | null, res: number[]): number[] => {
+// const preorderRecursive = (node: TreeNode | null, res: number[]): number[] => {
 //   if (!node) return [];
 //   res.push(node.val);
 //   if (node.left) dfsRecursive(node.left, res);
@@ -26,17 +26,19 @@ const preorderTraversal = (root: TreeNode | null): number[] => {
 //   return res;
 // };
 
-const dfsIterative = (node: TreeNode | null): number[] => {
-  if (!node) return [];
+const preorderIterative = (root: TreeNode | null): number[] => {
+  if (!root) return [];
   const res: number[] = [];
-  const stack: TreeNode[] = [node];
-  while (stack.length) {
-    const node = stack.pop();
-    if (node) {
+  const stack: TreeNode[] = [];
+  let node = root;
+  while (node || stack.length) {
+    while (node) {
       res.push(node.val);
-      if (node.right) stack.push(node.right);
-      if (node.left) stack.push(node.left);
+      stack.push(node);
+      node = node.left;
     }
+    node = stack.pop();
+    node = node.right;
   }
   return res;
 };
