@@ -21,8 +21,8 @@ const preorderTraversal = (root: TreeNode | null): number[] => {
 // const preorderRecursive = (node: TreeNode | null, res: number[]): number[] => {
 //   if (!node) return [];
 //   res.push(node.val);
-//   if (node.left) dfsRecursive(node.left, res);
-//   if (node.right) dfsRecursive(node.right, res);
+//   if (node.left) preorderRecursive(node.left, res);
+//   if (node.right) preorderRecursive(node.right, res);
 //   return res;
 // };
 
@@ -33,8 +33,8 @@ const preorderIterative = (root: TreeNode | null): number[] => {
   let node = root;
   while (node || stack.length) {
     while (node) {
-      res.push(node.val);
       stack.push(node);
+      res.push(node.val);
       node = node.left;
     }
     node = stack.pop();
