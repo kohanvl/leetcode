@@ -1,4 +1,5 @@
 /**
+ * Easy - https://leetcode.com/problems/symmetric-tree/
  * Definition for a binary tree node.
  * class TreeNode {
  *     val: number
@@ -23,7 +24,7 @@ const checkSymmetry = (
   if (!rootL && !rootR) return true;
   else if (!rootL || !rootR) return false;
   return (
-    rootL.val === rootR &&
+    rootL.val === rootR.val &&
     checkSymmetry(rootL.left, rootR.right) &&
     checkSymmetry(rootL.right, rootR.left)
   );
