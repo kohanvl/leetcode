@@ -1,5 +1,5 @@
 /**
- * Easy - https://leetcode.com/problems/binary-tree-inorder-traversal/
+ * Easy - https://leetcode.com/problems/binary-tree-postorder-traversal/
  * Definition for a binary tree node.
  * class TreeNode {
  *     val: number
@@ -13,20 +13,20 @@
  * }
  */
 
-const inorderTraversal = (root: TreeNode | null): number[] => {
-  // return inorderRecursive(root, []);
-  return inorderIterative(root);
+const postorderTraversal = (root: TreeNode | null): number[] => {
+  //   return postorderRecursive(root, []);
+  return postorderIterative(root);
 };
 
-// const inorderRecursive = (node: TreeNode | null, res: number[]): number[] => {
+// const postorderRecursive = (node: TreeNode | null, res: number[]): number[] => {
 //   if (!node) return [];
-//   if (node.left) inorderRecursive(node.left, res);
+//   if (node.left) postorderRecursive(node.left, res);
+//   if (node.right) postorderRecursive(node.right, res);
 //   res.push(node.val);
-//   if (node.right) inorderRecursive(node.right, res);
 //   return res;
 // };
 
-const inorderIterative = (root: TreeNode | null): number[] => {
+const postorderIterative = (root: TreeNode | null): number[] => {
   if (!root) return [];
   const res: number[] = [];
   const stack: TreeNode[] = [];
@@ -34,11 +34,11 @@ const inorderIterative = (root: TreeNode | null): number[] => {
   while (node || stack.length) {
     while (node) {
       stack.push(node);
-      node = node.left;
+      res.unshift(node.val);
+      node = node.right;
     }
     node = stack.pop();
-    res.push(node.val);
-    node = node.right;
+    node = node.left;
   }
   return res;
 };
