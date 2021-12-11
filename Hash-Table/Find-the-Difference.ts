@@ -1,10 +1,5 @@
-/**
- * Easy - https://leetcode.com/problems/find-the-difference/
- * @param {string} s
- * @param {string} t
- * @return {character}
- */
-const findTheDifference = (s, t) => {
+// Easy - https://leetcode.com/problems/find-the-difference/
+const findTheDifference = (s: string, t: string): string => {
   const hashTable = {};
   for (let i = 0; i < s.length; i++) {
     hashTable[s[i]] = hashTable[s[i]] + 1 || 1;
