@@ -1,12 +1,7 @@
-/**
- * Easy - https://leetcode.com/problems/intersection-of-two-arrays-ii/
- * @param {number[]} nums1
- * @param {number[]} nums2
- * @return {number[]}
- */
-const intersect = (nums1, nums2) => {
+// Easy - https://leetcode.com/problems/intersection-of-two-arrays-ii/
+const intersect = (nums1: number[], nums2: number[]): number[] => {
   const hashTable = {};
-  const result = [];
+  const result: number[] = [];
   for (let i = 0; i < nums1.length; i++) {
     hashTable[nums1[i]] = hashTable[nums1[i]] + 1 || 1;
   }
