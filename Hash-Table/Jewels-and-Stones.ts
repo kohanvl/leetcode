@@ -1,10 +1,5 @@
-/**
- * Easy - https://leetcode.com/problems/jewels-and-stones/
- * @param {string} jewels
- * @param {string} stones
- * @return {number}
- */
-const numJewelsInStones = (jewels, stones) => {
+// Easy - https://leetcode.com/problems/jewels-and-stones/
+const numJewelsInStones = (jewels: string, stones: string): number => {
   const hashTable = {};
   let count = 0;
 
