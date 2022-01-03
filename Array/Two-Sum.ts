@@ -1,10 +1,5 @@
-/**
- * Easy - https://leetcode.com/problems/two-sum/
- * @param {number[]} nums
- * @param {number} target
- * @return {number[]}
- */
-const twoSum = (nums, target) => {
+// Easy - https://leetcode.com/problems/two-sum/
+const twoSum = (nums: number[], target: number): number[] => {
   const hashMap = {};
   for (let i = 0; i < nums.length; i++) {
     hashMap[nums[i]] = i;
