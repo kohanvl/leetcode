@@ -1,5 +1,5 @@
 // Medium - https://leetcode.com/problems/group-anagrams/
-const groupAnagrams(strs: string[]): string[][] {
+const groupAnagrams = (strs: string[]): string[][] => {
   const hashMap = {};
   const result = [];
   for (let i = 0; i < strs.length; i++) {
