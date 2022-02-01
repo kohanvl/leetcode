@@ -1,17 +1,11 @@
-/**
- * Medium - https://leetcode.com/problems/longest-substring-without-repeating-characters/
- * @param {string} s
- * @return {number}
- */
+// Medium - https://leetcode.com/problems/longest-substring-without-repeating-characters/
 
-const lengthOfLongestSubstring = (s) => {
+function lengthOfLongestSubstring(s: string): number {
   if (s.length === 1) return 1;
-
   let slow = 0;
   let fast = 0;
   let maxSubstring = 0;
   const set = new Set();
-
   while (slow < s.length) {
     if (!set.has(s[fast]) && fast < s.length) {
       set.add(s[fast]);
@@ -22,6 +16,5 @@ const lengthOfLongestSubstring = (s) => {
       slow++;
     }
   }
-
   return maxSubstring;
-};
+}
