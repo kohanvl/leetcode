@@ -3,8 +3,23 @@
  * @param {string} s
  * @return {boolean}
  */
-const isPalindrome = (s) => {
-  const str = s.split(/\W|_/).join('');
-  const strReversed = str.split('').reverse().join('');
-  return str.toLowerCase() === strReversed.toLowerCase();
-};
+function isPalindrome(s: string): boolean {
+  const str = s.split(/\W|_/).join('').toLowerCase();
+  let left = 0;
+  let right = str.length - 1;
+  while (left < right) {
+    if (str[left] !== str[right]) return false;
+    left++;
+    right--;
+  }
+  return true;
+}
+
+/**
+ * Aproach 1 - using build in operations
+   function isPalindrome(s: string): boolean {
+    const str = s.split(/\W|_/).join('').toLowerCase();
+    const strReversed = str.split('').reverse().join('');
+    return str === strReversed;
+   };
+ */
