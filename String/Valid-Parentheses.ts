@@ -1,4 +1,5 @@
 //Easy - https://leetcode.com/problems/valid-parentheses/
+// "()[]{}" -> true
 const isValid = (s: string): boolean => {
   const parenthesesMap = {
     '(': ')',

@@ -1,4 +1,5 @@
 // Medium - https://leetcode.com/problems/group-anagrams/
+// ["eat","tea","tan","ate","nat","bat"] -> [["bat"],["nat","tan"],["ate","eat","tea"]]
 const groupAnagrams = (strs: string[]): string[][] => {
   const hashMap = {};
   const result = [];
