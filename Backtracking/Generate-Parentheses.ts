@@ -1,4 +1,5 @@
 // Medium - https://leetcode.com/problems/generate-parentheses/
+// Input: n = 3 -> Output: ["((()))","(()())","(())()","()(())","()()()"]
 const generateParenthesis = (n: number): string[] => {
   const stack: string[] = [];
   const res: string[] = [];

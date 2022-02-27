@@ -1,16 +1,17 @@
 /**
  * Easy - https://leetcode.com/problems/middle-of-the-linked-list/
  * Definition for singly-linked list.
- * function ListNode(val, next) {
- *     this.val = (val===undefined ? 0 : val)
- *     this.next = (next===undefined ? null : next)
+ * class ListNode {
+ *     val: number
+ *     next: ListNode | null
+ *     constructor(val?: number, next?: ListNode | null) {
+ *         this.val = (val===undefined ? 0 : val)
+ *         this.next = (next===undefined ? null : next)
+ *     }
  * }
  */
-/**
- * @param {ListNode} head
- * @return {ListNode}
- */
-const middleNode = (head) => {
+
+function middleNode(head: ListNode | null): ListNode | null {
   let node = head;
   let count = 0;
 
@@ -30,4 +31,4 @@ const middleNode = (head) => {
   }
 
   return head;
-};
+}

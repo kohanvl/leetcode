@@ -1,4 +1,5 @@
-// Medium - https://leetcode.com/problems/subarray-sum-equals-k/solution/
+// Medium - https://leetcode.com/problems/subarray-sum-equals-k
+// nums = [1,2,3], k = 3 -> 1 + 2 && 3 -> 2
 // Time - O(n)
 const subarraySum = (nums: number[], k: number): number => {
   const hashMap: {[key: number]: number} = {0: 1};
