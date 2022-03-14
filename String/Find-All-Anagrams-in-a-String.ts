@@ -1,3 +1,4 @@
+// Medium - https://leetcode.com/problems/find-all-anagrams-in-a-string/
 function findAnagrams(s: string, p: string): number[] {
   const res: number[] = [];
   const hashMap = {};
