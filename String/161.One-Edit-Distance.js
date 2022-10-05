@@ -22,7 +22,6 @@ const isOneEditDistance = (s, t) => {
   let j = 0;
   let count = 0;
   if (Math.abs(sLen - tLen) > 1) return false;
-
   while (i < sLen && j < tLen) {
     if (s[i] !== t[j]) {
       if (count === 1) return false;
@@ -38,9 +37,7 @@ const isOneEditDistance = (s, t) => {
       j++;
     }
   }
-
   if (i < sLen && j < tLen) count++;
-
   return count === 1;
 };
 
