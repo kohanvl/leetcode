@@ -1,4 +1,9 @@
-// Easy - https://leetcode.com/problems/summary-ranges/
+/* Easy - https://leetcode.com/problems/summary-ranges/
+Compress array. 
+Example:
+Input: nums = [0,1,2,4,5,7]
+Output: ["0->2","4->5","7"]
+*/
 function summaryRanges(nums: number[]): string[] {
   let i = 0;
   const range: string[] = [];
