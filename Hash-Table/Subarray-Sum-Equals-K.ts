@@ -1,13 +1,16 @@
-// Medium - https://leetcode.com/problems/subarray-sum-equals-k
+// ya
+// Medium - https://leetcode.com/problems/subarray-sum-equals-k/
 // nums = [1,2,3], k = 3 -> 1 + 2 && 3 -> 2
 // Time - O(n)
 const subarraySum = (nums: number[], k: number): number => {
+  // init map with {0: 1}
   const hashMap: {[key: number]: number} = {0: 1};
   let count: number = 0;
   let sum: number = 0;
 
   for (let i = 0; i < nums.length; i++) {
     sum += nums[i];
+    // if sum - k exist in map then count increment
     if (hashMap[sum - k]) count += hashMap[sum - k];
     hashMap[sum] = hashMap[sum] + 1 || 1;
   }

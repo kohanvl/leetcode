@@ -1,12 +1,14 @@
-/**
+/** ya
  * Easy - https://leetcode.com/problems/valid-palindrome/
  * @param {string} s
  * @return {boolean}
  */
 function isPalindrome(s: string): boolean {
+  // remove all exept letters
   const str = s.split(/\W|_/).join('').toLowerCase();
   let left = 0;
   let right = str.length - 1;
+  // use two ponters
   while (left < right) {
     if (str[left] !== str[right]) return false;
     left++;

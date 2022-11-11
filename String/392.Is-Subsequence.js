@@ -1,4 +1,4 @@
-/**
+/** ya
  * Easy - https://leetcode.com/problems/is-subsequence/
  * @param {string} s
  * @param {string} t

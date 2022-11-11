@@ -11,6 +11,5 @@ const getRow = (rowIndex: number): number[] => {
     triangle.push(row);
     row.push(1);
   }
-  console.log(triangle);
   return triangle[rowIndex];
 };

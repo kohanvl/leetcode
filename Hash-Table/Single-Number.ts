@@ -1,3 +1,4 @@
+// ya
 // Easy - https://leetcode.com/problems/single-number/
 const singleNumber = (nums: number[]): number => {
   const hashTable = {};
