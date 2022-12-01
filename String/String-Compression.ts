@@ -1,3 +1,4 @@
+// ya
 // Medium - https://leetcode.com/problems/string-compression/
 // ["a","a","b","b","c","c","c"] -> ["a","2","b","2","c","3"]
 function compress(chars: string[]): number {
@@ -6,9 +7,11 @@ function compress(chars: string[]): number {
   let left = 0;
   let cur = 0;
   for (let right = 0; right <= chars.length; right++) {
+    // count same letters
     if (chars[cur] === chars[right]) count++;
     else {
       chars[left] = chars[cur];
+      // if letters more then 1
       if (count > 1) {
         const strCount = count.toString();
         for (let i = 0; i < strCount.length; i++) chars[++left] = strCount[i];

@@ -1,3 +1,4 @@
+// ya
 // Easy - https://leetcode.com/problems/reverse-words-in-a-string-iii/
 var reverseWords = function (s) {
   let res = '';
@@ -5,12 +6,13 @@ var reverseWords = function (s) {
   for (let cur of s) {
     // if cur === space
     if (cur === ' ') {
+      // add reverse words
       res += word + cur;
       word = '';
     } else {
+      // add reverse letters
       word = cur + word;
     }
-    console.log(cur, res, word);
   }
   return res + word;
 };

@@ -1,4 +1,4 @@
-/**
+/** ya
 PREMIUM
 Medium - https://leetcode.com/problems/one-edit-distance/
 
@@ -18,12 +18,15 @@ Output: true
 const isOneEditDistance = (s, t) => {
   const sLen = s.length;
   const tLen = t.length;
+  // two poiners
   let i = 0;
   let j = 0;
   let count = 0;
+  // if len more then 1 of each
   if (Math.abs(sLen - tLen) > 1) return false;
   while (i < sLen && j < tLen) {
     if (s[i] !== t[j]) {
+      // if more then one changes will need -> return false
       if (count === 1) return false;
       else if (sLen > tLen) i++;
       else if (sLen < tLen) j++;

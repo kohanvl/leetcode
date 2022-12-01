@@ -1,4 +1,4 @@
-/**
+/** ya
 PREMIUM
 Medium - https://leetcode.com/problems/line-reflection/
 
@@ -15,6 +15,7 @@ const isReflected = (points) => {
   for (let i = 0; i < points.length; i++) {
     const x = points[i][0];
     const y = points[i][1];
+    // set max and min X
     max = Math.max(max, x);
     min = Math.min(min, x);
     map.set(x, y);

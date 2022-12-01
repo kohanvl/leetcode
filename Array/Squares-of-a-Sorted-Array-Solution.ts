@@ -1,3 +1,4 @@
+// ya
 // https://leetcode.com/problems/squares-of-a-sorted-array/
 // Two pointers solution
 const sortedSquares = (nums: number[]): number[] => {

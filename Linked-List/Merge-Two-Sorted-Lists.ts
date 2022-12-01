@@ -1,4 +1,4 @@
-/**
+/** ya
  * Easy - https://leetcode.com/problems/merge-two-sorted-lists/
  * Definition for singly-linked list.
  * class ListNode {
@@ -15,20 +15,24 @@ const mergeTwoLists = (
   l1: ListNode | null,
   l2: ListNode | null,
 ): ListNode | null => {
+  // create result list
   const resultHead = new ListNode();
   let resultNode = resultHead;
 
   while (l1 && l2) {
+    // if l1 < l2
     if (l1.val < l2.val) {
       resultNode.next = l1;
       l1 = l1.next;
-    } else {
+    }
+    //if l1 > l2
+    else {
       resultNode.next = l2;
       l2 = l2.next;
     }
     resultNode = resultNode.next;
   }
-
+  // add rest
   resultNode.next = l1 || l2;
 
   return resultHead.next;

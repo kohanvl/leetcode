@@ -1,3 +1,4 @@
+// ya
 // Medium - https://leetcode.com/problems/longest-subarray-of-1s-after-deleting-one-element/
 // [0,1,1,1,0,1,1,0,1] -> [1,1,1,0,1,1] -> 5
 function longestSubarray(nums: number[]): number {
