@@ -16,8 +16,8 @@ Output: true
 */
 
 const isOneEditDistance = (s, t) => {
-  const sLen = s.length;
-  const tLen = t.length;
+  const sLen = s.length + 1;
+  const tLen = t.length + 1;
   // two poiners
   let i = 0;
   let j = 0;
@@ -50,3 +50,4 @@ console.log(isOneEditDistance('1203', '1213')); // true
 console.log(isOneEditDistance('cab', 'ad')); // false
 console.log(isOneEditDistance('aa', 'aa')); //false
 console.log(isOneEditDistance('', '')); //false
+console.log(isOneEditDistance('a', '')); //true
