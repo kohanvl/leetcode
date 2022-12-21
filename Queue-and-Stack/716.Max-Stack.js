@@ -29,15 +29,15 @@ var MaxStack = function () {
 };
 
 /**
- * @param {number} val
+ * @param {number} x
  * @return {void}
  */
-MaxStack.prototype.push = function (val) {
-  this.stack.push(val);
+MaxStack.prototype.push = function (x) {
+  this.stack.push(x);
 };
 
 /**
- * @return {void}
+ * @return {number}
  */
 MaxStack.prototype.pop = function () {
   return this.stack.pop();
@@ -60,20 +60,22 @@ MaxStack.prototype.peekMax = function () {
 /**
  * @return {number}
  */
+// O(n), but need to be O(1)
 MaxStack.prototype.popMax = function () {
-  const max = Math.max(...this.stack);
-  for (let i = stack.length - 1; i >= 0; i--) {
-    if (this.stack[i] === max) {
-      return this.stack.splice(i, 1);
-    }
+  let maxIdx = 0;
+  // find max id
+  for (let i = 1; i < this.stack.length; i++) {
+    if (this.stack[i] >= this.stack[maxIdx]) maxIdx = i;
   }
+  return this.stack.splice(maxIdx, 1)[0];
 };
 
 /**
  * Your MaxStack object will be instantiated and called as such:
  * var obj = new MaxStack()
- * obj.push(val)
- * obj.pop()
+ * obj.push(x)
+ * var param_2 = obj.pop()
  * var param_3 = obj.top()
  * var param_4 = obj.peekMax()
+ * var param_5 = obj.popMax()
  */
