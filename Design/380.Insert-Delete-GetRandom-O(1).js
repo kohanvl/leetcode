@@ -1,15 +1,22 @@
 // ya
 // Medium - https://leetcode.com/problems/insert-delete-getrandom-o1/
+// we need two data structure: map and array
 var RandomizedSet = function () {
-  this.set = [];
+  this.map = new Map();
+  this.arr = [];
 };
 
 /**
  * @param {number} val
  * @return {boolean}
  */
+// O(1)
 RandomizedSet.prototype.insert = function (val) {
-  this.set.push(val);
+  if (this.map.has(val)) return false;
+  // add to map
+  this.map.set(val, this.arr.length);
+  // add to array
+  this.arr.push(val);
   return true;
 };
 
@@ -17,19 +24,27 @@ RandomizedSet.prototype.insert = function (val) {
  * @param {number} val
  * @return {boolean}
  */
+// O(1)
 RandomizedSet.prototype.remove = function (val) {
-  const len = this.set.length;
-  this.set.filter((e) => e !== val);
-  console.log(this.set);
-  if (len === this.set.length) return false;
-  else return true;
+  if (!this.map.has(val)) return false;
+  const idx = this.map.get(val);
+  const arrLen = this.arr.length;
+  // swap current and last element in array
+  [this.arr[idx], this.arr[arrLen - 1]] = [this.arr[arrLen - 1], this.arr[idx]];
+  // remove from array: pop the last element
+  this.arr.pop();
+  this.map.set(this.arr[idx], idx);
+  // remove from map
+  this.map.delete(val);
+  return true;
 };
 
 /**
  * @return {number}
  */
+// O(1)
 RandomizedSet.prototype.getRandom = function () {
-  return Math.random(...this.set);
+  return this.arr[Math.floor(Math.random() * this.arr.length)];
 };
 
 /**
